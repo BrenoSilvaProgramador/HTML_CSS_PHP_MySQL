@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Exercicio 02</title>
+	<style type="text/css">
+		* {
+			margin: 0px;
+			padding: 0px;
+		}
+		body {
+			background-color: #2af;
+			font-family: arial;
+		}
+
+		div#corpo{
+			margin: auto;
+			width: 500px;
+			height: 200px;
+			background-color: white;
+			border-radius: 10px;
+			box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+			padding: 20px;
+			font-size: 20px;
+		}
+
+		img {
+			height: 200px;
+		}
+
+		h1 {
+			text-align: center;
+			margin-bottom: 50px;
+			margin-top: 20px;
+			color: white;
+			font-weight: bolder;
+		}
+		footer p {
+			text-align: center;
+			color: white;
+			font-size: 20px;
+			margin-top: 20px;
+		}
+
+	</style>
+</head>
+<body>
+
+	<h1>Verificador de Idade</h1>
+
+	<div id="corpo">
+	Ano de nascimento: <input type="number" name="idade" id="idade"><br><br>
+
+	Sexo:
+	<input type="radio" name="sexo" id="sexom"> <label for = "sexom">Masculino</label>
+	<input type="radio" name="sexo" id="sexof"> <label for = "sexof">Feminino</label>
+
+	<br><br><input type="submit" value="verificar" onclick="verificarIdade()"><br>
+
+	<p id="resultado"></p><br>
+	<p>Preencha os dados e descubra a sua idade!</p>
+	<img src="" id="imagem">
+
+	</div>
+
+	<footer> <p>@BrenoSilva</p> </footer>
+	<script type="text/javascript">
+
+		function verificarIdade() {
+
+			var ano_nascimento = window.document.getElementById('idade');
+			var ano_nascimento = Number(ano_nascimento.value);
+
+			var resultado_idade = window.document.getElementById('resultado');
+
+			var agora = new Date();	
+			var ano = agora.getFullYear();
+			var mes = agora.getMonth();
+			var dia = agora.getDay();
+
+			var idade_atual = ano - ano_nascimento;
+
+			var sexo = window.document.getElementsByName('sexo');
+			var genero = '';
+
+			if (ano_nascimento <= ano) {
+
+				if(sexo[0].checked){
+				genero = 'homem'
+				resultado_idade.innerHTML = `A sua idade e ${idade_atual} e seu sexo e ${homem}.`;
+				}
+
+			} else {
+			resultado_idade.innerText = "Insira uma idade valida!";
+			}
+
+		}
+	</script>
+</body>
+</html>

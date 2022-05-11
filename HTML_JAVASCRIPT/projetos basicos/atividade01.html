@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Exercicio 01</title>
+	<style type="text/css">
+		* {
+			margin: 0px;
+			padding: 0px;
+			font-family: arial;
+			text-align: center;
+			font-size: 20px;
+		}
+		div {
+			width: 500px;
+			height: 300px;
+			margin: 50px auto;
+			box-shadow: 1px 1px 5px rgba(0, 0, 0, .6);
+			color: black;
+			border-radius: 20px;
+			background-color: white;
+			padding: 20px;
+		}
+		p {
+			font-size: 25px;
+		}
+		h1 {
+			font-weight: bolder;
+			font-size: 30px;
+			margin-top: 30px;
+		}
+		img {
+			height: 200px;
+		}
+
+	</style>
+</head>
+<body>
+	<h1>Hora do dia</h1>
+
+	<div>
+
+	<P id = "hora"></P>
+	<img src="manha.jpg" id="imagem">
+
+	</div>
+
+	<p>feito por @BrenoSilvaMendonça</p>
+
+	<script type="text/javascript">
+
+		const agora = new Date();
+		let hora = agora.getHours();
+		let minutos = agora.getMinutes();
+		let segundos = agora.getSeconds();	 
+
+		var dado = window.document.getElementById("hora");
+		var foto = window.document.getElementById("imagem");
+
+		if(hora > 0 && hora <= 12){
+			dado.innerText = `A hora atual e ${hora} horas ${minutos} minutos e ${segundos} segundos! O período é matutino`;
+			document.body.style.backgroundColor = "blue";
+			foto.src = "manha.jpg";
+		}
+		else if(hora > 12 && hora <= 18){
+			dado.innerText = `A hora atual e ${hora} horas ${minutos} minutos e ${segundos} segundos! O período é vespertino`;
+			document.body.style.backgroundColor = "yellow";
+			foto.src = "tarde.jpg";
+		}
+		else {
+			dado.innerText = `A hora atual e ${hora} horas ${minutos} minutos e ${segundos} segundos! O periodo é noturno`;
+			document.body.style.backgroundColor = "gray";
+			foto.src = "noite.jpg";
+		}
+
+	</script>
+</body>
+</html>

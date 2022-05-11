@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Lâmpada</title>
+
+	<!-- <link rel="stylesheet" href="style.css"> -->
+	
+	<style>
+	header, main {
+		display: flex;
+		flex-direction: column;
+		align-items: center;}
+	button {
+		width: 80px;}
+	</style>
+</head>
+<body>
+		<header>
+			<h1>VANILLA JS</h1>
+		</header>
+<main>
+		<div>
+			<img src="lampada.jpg" alt="lampada.jpg" id="lamp">
+		</div>
+		<div>
+			<button id="turnOn">Ligar</button>
+			<button id="turnOff">Desligar</button>
+			<button id="reconstruct">Reconstruir</button>
+		</div>
+</main>
+	
+	<!-- <script src="lampada.js"></script> -->
+
+	<script>
+
+//constantes
+	const turnOn = document.getElementById('turnOn');
+	const turnOff = document.getElementById('turnOff');
+	const lamp = document.getElementById('lamp');
+
+//funções
+	function isLampBroken () {
+	return lamp.src.indexOf ('lampada_quebrada') > -1;}
+
+	function lampOn () {
+	if (!isLampBroken ()) 
+	{lamp.src = 'lampada_acesa.jpg';}}	
+	
+	function lampOff () {
+	if (!isLampBroken ()) 
+	{lamp.src = 'lampada.jpg';}}
+	
+	function lampBroken () {
+	lamp.src = 'lampada_quebrada.jpg';}
+
+//Eventos
+	turnOn.addEventListener ( 'click', lampOn );
+	turnOff.addEventListener ( 'click', lampOff );
+
+
+	lamp.addEventListener ('mouseover', lampOn);
+	lamp.addEventListener ('mouseleave', lampOff);
+	lamp.addEventListener ('dblclick', lampBroken);
+
+	</script>
+</body>
+</html>

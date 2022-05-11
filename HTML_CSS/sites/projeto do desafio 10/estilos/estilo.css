@@ -1,0 +1,130 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@font-face {
+    font-family: 'fonte';
+    src: url(../fontes/idroid.otf) format('opentype');
+}
+
+body {
+    background-color: rgb(162, 214, 162);
+    margin: auto; 
+}
+p {
+    text-indent: 50px;
+}
+
+strong {
+    color: green;
+    font-weight: bolder;
+}
+li {
+    text-decoration: underline;
+}
+
+a {
+    text-decoration: none;
+    color: green;
+    font-weight: bolder;
+}
+
+img, iframe{
+    display: block;
+    margin:auto;
+}
+header {
+    color: white;
+    background-image: linear-gradient(to bottom, rgb(148, 241, 148), rgb(17, 63, 17));
+    text-align: center;
+    padding: 10px;
+    box-shadow: 10px 1px 10px rgba(1,1,1,0.5);
+    height: 230px;
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 200;
+}
+header li {
+    display: inline-block;
+    margin: 10px;
+    text-decoration: none;
+}
+div.corpo_principal{
+    background-color: white;
+    font-family: arial, sans-serif;
+    width: 900px;
+    margin: auto;
+    padding: 10px;
+    border-bottom-left-radius:  10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 10px 1px 10px rgba(1,1,1,0.5);
+}
+div.corpo_principal h2 {
+    font-family: 'fonte';
+    color: rgb(2, 82, 2);
+    background-image: linear-gradient(to right, rgb(162, 255, 162), white);
+}
+div.corpo_principal h1 {
+    font-family: 'fonte';
+    color: rgb(2, 82, 2);
+}
+
+div#video {
+    background-color: rgb(1, 63, 1);
+    padding: 0px;
+}
+header li:hover {
+    border: 1px solid white;
+    padding: 10px;
+    background-color: rgb(154, 243, 154);
+    border-color: transparent;
+} 
+
+header nav.menu {
+    position: absolute;
+    left: -40px;
+}
+
+main {
+    width: 900px;
+    margin: auto;
+}
+
+aside {
+    width: 900px;
+    margin: auto;
+}
+
+aside article {
+    background-color: rgb(190, 236, 190);
+    padding: 0;
+    width: 800px;
+    margin: auto;
+    box-shadow: 4px 4px 10px rgba(1,1,1,0.5);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+aside h3
+{
+    background-color: green;
+    color: white;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+div#aside {
+    padding: 10px;
+}
+div#aside ul {
+    display: inline-block;
+}
+
+div#aside ul.lista {
+    margin-left: 150px;
+}
+
+
+footer {
+    background-color: rgb(1, 73, 1);
+    color: white;
+    text-align: center;
+    padding: 5px;
+    margin-top: 20px;
+}

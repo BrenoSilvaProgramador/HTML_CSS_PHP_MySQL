@@ -1,0 +1,9 @@
+section#corpo
+	{color:  #fff;
+	 font: normal 20pt arial;
+	 height: 200px;
+	 width: 400px;
+	 border-style: double;
+	 text-align: center;
+	 background-color: rgba(42, 137, 22, 0.6);}
+

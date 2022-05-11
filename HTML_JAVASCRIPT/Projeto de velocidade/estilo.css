@@ -1,0 +1,6 @@
+article#corpo 
+
+	{font: normal 25pt arial; color: #000;
+ 	height: 300px; width: 650px;
+ 	border-style: double; background-color: rgba(42, 137, 22,0.5);
+ 	text-align: center; padding: 10px;}
